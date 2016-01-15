@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false">
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:padding="@dimen/activity_horizontal_margin">
+
+
+        <TextView
+            android:id="@+id/tv_dialog_create_newsonglist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_ed_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dialog_create_newsonglist_title"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_dialog_new_songname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint=""
+                        android:text="是否要删除当前员工"
+                        android:textColor="@android:color/holo_purple"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_ed_container"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dialog_submit"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/dialog_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_dialog_cancle"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/dialog_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
