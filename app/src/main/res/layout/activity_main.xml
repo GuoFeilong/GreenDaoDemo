@@ -47,9 +47,9 @@
                 <EditText
                     android:id="@+id/et_staff_num"
                     android:layout_width="match_parent"
-                    android:textSize="13sp"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -68,10 +68,10 @@
 
                 <EditText
                     android:id="@+id/et_staff_name"
-                    android:textSize="13sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -101,10 +101,10 @@
                 <EditText
                     android:id="@+id/et_staff_ege"
                     android:layout_width="match_parent"
-                    android:textSize="13sp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -125,8 +125,8 @@
                     android:id="@+id/et_staff_motto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -155,6 +155,26 @@
                     android:textColor="@color/colorPrimary" />
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/selector_btn_clear"
+                    android:text="清空"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="0dp"

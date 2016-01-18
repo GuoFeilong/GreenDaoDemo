@@ -18,4 +18,6 @@ public interface StaffView {
     void insertStaff(StaffTable insertStaff);
 
     void deleteStaffByID();
+
+    void clearStaffTable();
 }

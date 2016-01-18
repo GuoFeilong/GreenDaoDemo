@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.greendaodemo.Model.StaffModel;
 import com.greendaodemo.presenter.StaffPresenter;
+import com.greendaodemo.utils.logger.Logger;
 import com.greendaodemo.view.StaffView;
 import com.socks.greendao.StaffTable;
 import com.socks.greendao.StaffTableDao;
@@ -58,11 +59,18 @@ public class StaffPresenterImpl implements StaffPresenter {
     public void insertStaff(StaffTable insertStaff) {
         staffTableDao.insert(insertStaff);
         staffView.insertStaff(insertStaff);
+        Logger.d(insertStaff.getId()+"传入的id");
     }
 
     @Override
     public void deleteStaffByID(Long id) {
         staffTableDao.deleteByKey(id);
         staffView.deleteStaffByID();
+    }
+
+    @Override
+    public void clearStaffTable() {
+        staffTableDao.deleteAll();
+        staffView.clearStaffTable();
     }
 }

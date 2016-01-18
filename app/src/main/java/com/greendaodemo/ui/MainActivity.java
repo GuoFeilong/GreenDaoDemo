@@ -43,6 +43,8 @@ public class MainActivity extends BaseActivity implements StaffView {
     Button mInsertButton;
     @Bind(R.id.btn_search)
     Button mSearchButton;
+    @Bind(R.id.btn_clear)
+    Button mClearAll;
     @Bind(R.id.recyler_staffs)
     RecyclerView mStaffsRecylerView;
 
@@ -92,7 +94,7 @@ public class MainActivity extends BaseActivity implements StaffView {
     protected void initEvent() {
         mInsertButton.setOnClickListener(this);
         mSearchButton.setOnClickListener(this);
-
+        mClearAll.setOnClickListener(this);
         mStaffsRecylerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -104,6 +106,9 @@ public class MainActivity extends BaseActivity implements StaffView {
                 break;
             case R.id.btn_search:
                 queryStaff();
+                break;
+            case R.id.btn_clear:
+                staffPresenter.clearStaffTable();
                 break;
             case R.id.tv_dialog_cancle:
                 // 取消
@@ -214,6 +219,12 @@ public class MainActivity extends BaseActivity implements StaffView {
         T.show(MainActivity.this, "删除成功", 0);
         staffPresenter.queryAllStaffs();
         dialog.dismiss();
+    }
+
+    @Override
+    public void clearStaffTable() {
+        T.show(MainActivity.this, "清除成功", 0);
+        staffPresenter.queryAllStaffs();
     }
 
     /**

@@ -41,7 +41,13 @@ public interface StaffPresenter {
 
     /**
      * 通过ID 删除人员
+     *
      * @param id
      */
     void deleteStaffByID(Long id);
+
+    /**
+     * 清空所有的员工
+     */
+    void clearStaffTable();
 }
